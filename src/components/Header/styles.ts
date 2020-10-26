@@ -11,6 +11,12 @@ justify-content: center;
 top: 0px;
 right:0;
 left:0;
+
+@media(max-width: 679px){
+  padding: 0px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
 `;
 
 export const CloudIcon = styled.img`
@@ -18,6 +24,12 @@ width:48px;
 left: 90px;
 position: absolute;
 top: 30px;
+
+@media(max-width: 680px){
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
 `;
 
 export const Links = styled.ul`
@@ -40,5 +52,16 @@ li {
         transition: 280ms linear;
     }
 }
+
+@media(max-width: 678px) {
+  display: none;
+}
+`;
+
+export const MenuButton = styled.div`
+
+  @media(min-width:681px){
+    display: none;
+  }
 `;
 

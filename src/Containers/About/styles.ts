@@ -32,7 +32,7 @@ export const CardContent = styled.div`
   align-items: center;
   flex-wrap: wrap;
   margin-top: 25px;
-  width: 90%;
+  width: 95%;
   justify-content: center;
   overflow-x: scroll;
   max-width: 1190px;

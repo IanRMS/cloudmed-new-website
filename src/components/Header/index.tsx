@@ -1,10 +1,15 @@
 import React from 'react';
 
-import { CloudIcon, Container, Links } from './styles';
+import { CloudIcon, Container, Links, MenuButton } from './styles';
 
 import icon from '../../assets/images/cloudmed-icon.svg';
+import {FaBars} from 'react-icons/fa';
 
-const Header: React.FC = () => {
+interface Props {
+  onClick: () => void;
+}
+
+const Header: React.FC<Props> = ({onClick}) => {
   return (
     <Container>
       <CloudIcon alt="" src={icon}/>
@@ -14,6 +19,9 @@ const Header: React.FC = () => {
       <li>Tecnologias</li>
       <li>Contato</li>
      </Links>
+     <MenuButton onClick={onClick}>
+       <FaBars fontSize={24} color="#fff"/>
+     </MenuButton>
     </Container>
   );
 };
