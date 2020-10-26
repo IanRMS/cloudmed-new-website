@@ -10,11 +10,10 @@ const Header: React.FC = () => {
       <CloudIcon alt="" src={icon}/>
       <Links>
       <li>Início</li>
-      <li>Soluções</li>
-      <li>Tecnologia</li>
+      <li>Sobre</li>
+      <li>Tecnologias</li>
       <li>Contato</li>
-      <li>Blog</li>
-      </Links>
+     </Links>
     </Container>
   );
 };

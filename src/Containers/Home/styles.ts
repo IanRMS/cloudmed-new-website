@@ -11,11 +11,12 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
 `;
 
 export const Logo = styled.img`
 width: 100%;
-max-width:560px;
+max-width:520px;
 `;
 
 export const Description = styled.span`
@@ -32,15 +33,16 @@ const arrowBouncing = keyframes`
 50% {transform: translatey(0)}
 60% {transform: translatey(20px);}
 75% {transform: translatey(0px);}
-86% {transform: translatey(10px);}
+86% {transform: translatey(5px);}
 100% {transform: translatey(0px)}
 `
 
 export const ArrowIcon = styled.div`
 width:48px;
 height:48px;
-position: absolute;
-bottom:20px;
 animation: ${arrowBouncing} 2.5s linear infinite;
 animation-delay: 1.5s;
+position: absolute;
+bottom: 20px;
+opacity: 1;
 `;
