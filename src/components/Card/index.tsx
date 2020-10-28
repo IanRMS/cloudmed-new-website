@@ -6,14 +6,17 @@ import { Image, Container, Text, Button } from './styles';
 interface Props {
   text:string;
   img: string | undefined;
+  onPress: () => void;
+  cardId: number;
+  objectId: number;
 }
 
-const Card: React.FC<Props> = ({text, img = ''}) => {
+const Card: React.FC<Props> = ({text, img = '', onPress, cardId, objectId}) => {
   return (
-    <Container>
+    <Container cardId={cardId} objectId={objectId}>
       <Image alt="" src={img}/>
       <Text>{text}</Text>
-      <Button>
+      <Button type="button" onClick={onPress}>
       <FaAngleDown color="#F9B43A" size="2.5em"/>
       </Button>
     </Container>

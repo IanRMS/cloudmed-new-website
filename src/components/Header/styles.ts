@@ -11,6 +11,7 @@ justify-content: center;
 top: 0px;
 right:0;
 left:0;
+z-index: 10;
 
 @media(max-width: 679px){
   padding: 0px 30px;

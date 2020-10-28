@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  cardId: number;
+  objectId: number;
+}
+
+export const Container = styled.div<ContainerProps>`
 min-width: 190px;
 max-width: 190px;
 height:300px;
@@ -12,6 +17,9 @@ border-radius: 8px;
 text-align: center;
 align-items: center;
 margin: 10px 0px;
+user-select: none;
+filter: ${props => props.cardId === props.objectId ? 'brightness(30%)' : 'brightness(100%)'};
+transition: 280ms ease-in-out;
 `;
 
 export const Text = styled.span`
@@ -30,6 +38,7 @@ background: transparent;
 border: none;
 margin-bottom: 5px;
 transition: 180ms linear;
+outline: none;
 
 &:hover {
   transform: scale(1.2);

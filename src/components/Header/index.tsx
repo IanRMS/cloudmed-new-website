@@ -14,10 +14,10 @@ const Header: React.FC<Props> = ({onClick}) => {
     <Container>
       <CloudIcon alt="" src={icon}/>
       <Links>
-      <li>Início</li>
-      <li>Sobre</li>
-      <li>Tecnologias</li>
-      <li>Contato</li>
+        <li>Início</li>
+        <li>Sobre</li>
+        <li>Tecnologias</li>
+        <li>Contato</li>
      </Links>
      <MenuButton onClick={onClick}>
        <FaBars fontSize={24} color="#fff"/>
