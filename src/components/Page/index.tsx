@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import About from '../../Containers/About';
 import Home from '../../Containers/Home';
+import Tecnologies from '../../Containers/Tecnologies';
 import Drawer from '../Drawer';
 import Header from '../Header';
 
@@ -14,6 +15,7 @@ const Page: React.FC = () => {
       <Drawer show={showDrawer} onClick={() => handleDrawer(!showDrawer)}/>
       <Home/>
       <About/>
+      <Tecnologies/>
     </Container>
   );
 };

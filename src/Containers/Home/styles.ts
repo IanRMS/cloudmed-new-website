@@ -15,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-width: 95%;
+width: 90%;
 max-width:520px;
 `;
 

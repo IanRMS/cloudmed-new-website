@@ -50,8 +50,6 @@ export const CardContent = styled.div`
     height: 10px;
   }
 
-
-
   &::-webkit-scrollbar-track {
     background: rgba(255,255,255,0.2);
     border-radius: 4px;
@@ -105,11 +103,11 @@ export const Details = styled.div<DetailsProps>`
 
   @media(max-width: 768px) {
     width: 98%;
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 4px;
-     height: ${props => props.show ? 'calc(98% - 120px)' : '0px'};
+     height: ${props => props.show ? 'calc(98% - 125px)' : '0px'};
   }
 `;
 

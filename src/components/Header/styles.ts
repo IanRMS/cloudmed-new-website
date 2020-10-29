@@ -54,7 +54,7 @@ li {
     }
 }
 
-@media(max-width: 678px) {
+@media(max-width: 680px) {
   display: none;
 }
 `;
