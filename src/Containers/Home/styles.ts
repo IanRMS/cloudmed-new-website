@@ -15,34 +15,34 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-width: 90%;
-max-width:520px;
+  width: 90%;
+  max-width:520px;
 `;
 
 export const Description = styled.span`
-font-size: 28px;
-font-weight: 400;
-text-align: center;
-color: #edf2f7;
-margin-top: 25px;
-text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+  color: #edf2f7;
+  margin-top: 25px;
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
 `;
 
 const arrowBouncing = keyframes`
-0% {transform: translatey(0)};
-50% {transform: translatey(0)}
-60% {transform: translatey(20px);}
-75% {transform: translatey(0px);}
-86% {transform: translatey(5px);}
-100% {transform: translatey(0px)}
+  0% {transform: translatey(0)};
+  50% {transform: translatey(0)}
+  60% {transform: translatey(20px);}
+  75% {transform: translatey(0px);}
+  86% {transform: translatey(5px);}
+  100% {transform: translatey(0px)}
 `
 
 export const ArrowIcon = styled.div`
-width:48px;
-height:48px;
-animation: ${arrowBouncing} 2.5s linear infinite;
-animation-delay: 1.5s;
-position: absolute;
-bottom: 20px;
-opacity: 1;
+  width:48px;
+  height:48px;
+  animation: ${arrowBouncing} 2.5s linear infinite;
+  animation-delay: 1.5s;
+  position: absolute;
+  bottom: 20px;
+  opacity: 1;
 `;

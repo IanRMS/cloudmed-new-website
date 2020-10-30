@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import About from '../../Containers/About';
+import Contact from '../../Containers/Contact';
 import Home from '../../Containers/Home';
 import Tecnologies from '../../Containers/Tecnologies';
 import Drawer from '../Drawer';
@@ -16,6 +17,7 @@ const Page: React.FC = () => {
       <Home/>
       <About/>
       <Tecnologies/>
+      <Contact/>
     </Container>
   );
 };
