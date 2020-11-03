@@ -51,6 +51,7 @@ export const FormCard = styled.div`
     width: 60%;
     min-width: 310px;
     margin-right: 15px;
+    position: relative;
 
   @media(max-width: 768px){
     width: 100%;
@@ -159,7 +160,7 @@ export const InfoCard = styled.div`
   border-radius:8px;
   background: #fff;
   padding: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 `;
 
 export const InfoLogotipo = styled.img.attrs({
@@ -216,7 +217,14 @@ export const MapCard = styled.div`
       border-radius: 8px !important;
     }
   }
+`;
 
+export const ProgressContainer = styled.div`
+  width: 100%;
+  top: 0px;
+  right: 0;
+  left: 0;
+  position: absolute;
 `;
 
 export const MapPin = styled.div<PinProps>`

@@ -19,11 +19,13 @@ import {
   LocalizationContainer,
   MapCard,
   MapPin,
+  ProgressContainer,
   SubmitButton,
   TdIcon,
   TdInfo,
   TextArea
 } from './styles';
+import { LinearProgress } from '@material-ui/core';
 
 const Contact: React.FC = () => {
   const [name, setName] = useState("");
@@ -56,6 +58,11 @@ const Contact: React.FC = () => {
       <Title text="ENTRE EM CONTATO" />
       <Content>
         <FormCard>
+          { !loading &&
+            <ProgressContainer>
+              <LinearProgress color="primary" style={{height: 8, borderRadius: '8px 8px 0px 0px'}}/>
+            </ProgressContainer>
+          }
           <form onSubmit={handleSubmit}>
             <InputContainer>
               <Input
