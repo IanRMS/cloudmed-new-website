@@ -51,7 +51,6 @@ export const FormCard = styled.div`
     width: 60%;
     min-width: 310px;
     margin-right: 15px;
-  }
 
   @media(max-width: 768px){
     width: 100%;
