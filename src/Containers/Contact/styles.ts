@@ -6,6 +6,11 @@ interface InputProps {
   error?: boolean;
 }
 
+interface PinProps {
+  lat: number;
+  lng: number;
+}
+
 export const Container = styled.div`
   background-image:url(${background});
   background-position: top;
@@ -37,16 +42,16 @@ export const Content = styled.div`
 `;
 
 export const FormCard = styled.div`
-  background: #fff;
-  border-radius: 8px;
-  padding: 25px 20px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  max-width: 680px;
-  width: 60%;
-  min-width: 310px;
-  margin-right: 15px;
-  /* height: 400px; */
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 680px;
+    width: 60%;
+    min-width: 310px;
+    margin-right: 15px;
+  }
 
   @media(max-width: 768px){
     width: 100%;
@@ -75,7 +80,7 @@ export const FormCard = styled.div`
 export const InputContainer = styled.div`
   width: 100%;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 `;
 
 export const Input = styled.input<InputProps>`
@@ -93,15 +98,15 @@ export const Input = styled.input<InputProps>`
   }
 `;
 
-export const TextArea = styled.textarea`
+export const TextArea = styled.textarea<InputProps>`
   width:100%;
   padding: 8px;
   min-height: 160px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid ${props => props.error ? '#D7182A' : '#e0e0e0'};
 
   &:focus {
     outline: none;
-    border: 2px solid #3f3d56;
+    border: ${props => `2px solid ${props.error ? '#D7182A' : '#3F3D56'}`};
   }
 `;
 
@@ -121,6 +126,9 @@ export const SubmitButton = styled.button`
   }
   :active {
     filter: brightness(150%);
+  }
+  :disabled {
+    cursor: not-allowed;
   }
 `;
 
@@ -200,4 +208,29 @@ export const MapCard = styled.div`
   height: 320px;
   border-radius: 8px;
   background: #FFF;
+
+  > div {
+    width: 100%;
+    height: 100%;
+
+    div {
+      border-radius: 8px !important;
+    }
+  }
+
+`;
+
+export const MapPin = styled.div<PinProps>`
+  background: none;
+  padding: 15px 10px;
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  svg {
+    font-size: 36px;
+    color: #D7182A;
+  }
 `;

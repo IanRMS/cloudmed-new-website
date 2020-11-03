@@ -17,5 +17,14 @@
     return true;
   }
 
+  const ValidationMessage = (value:string): boolean => {
+    if (value.length) {
+      if (value.length > 4) {
+        return false;
+      } return true;
+    }
+    return false;
+  }
 
-  export {ValidationName, ValidationEmail};
+
+  export {ValidationName, ValidationEmail, ValidationMessage};
