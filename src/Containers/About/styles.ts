@@ -11,7 +11,6 @@ export const Container = styled.div`
     background-size: cover;
     max-width: 100vw;
     min-height: 100vh;
-    /* height: 100vh; */
     padding-top: 150px;
     scroll-snap-align: start;
     position: relative;

@@ -8,8 +8,9 @@ import FerramentasImg from '../../assets/images/ferramentas-de-ponta.svg';
 import DesignImg from '../../assets/images/design-e-tudo.svg';
 import PageDescription from '../../components/PageDescription';
 import { FaAngleDown } from 'react-icons/fa';
+import ContainerProps from '../../models/container';
 
-const Tecnologies: React.FC = () => {
+const Tecnologies: React.FC<ContainerProps> = ({forwardRef}) => {
   const [idSelected, setIdSelected] = useState(0);
 
   const handleSelectId = (id: number) => {
@@ -20,7 +21,7 @@ const Tecnologies: React.FC = () => {
     }
   }
   return (
-    <Container>
+    <Container ref={forwardRef}>
       <Title text="NOSSAS TECNOLOGIAS"/>
       <PageDescription text="Somos uma empresa de tecnologia que oferece soluções
         para o setor de saúde, com foco na melhoria de processos,

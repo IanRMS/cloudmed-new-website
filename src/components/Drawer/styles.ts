@@ -8,7 +8,7 @@ export const Container = styled.div<Props>`
   width: 260px;
   height: 100vh;
   position: fixed;
-  z-index: 4;
+  z-index: 11;
   right: 0;
   top: 0;
   background-color: #fafafa;
@@ -16,6 +16,10 @@ export const Container = styled.div<Props>`
   box-shadow: 2px 0px 20px 5px rgba(0,0,0,0.4);
   transform: ${props => props.show ? 'translatX(0px)' : 'translateX(260px)'};
   padding: 10px 20px;
+
+  @media(min-width: 681px) {
+    display: none;
+  }
 `;
 
 export const BackDrop = styled.div<Props>`
@@ -53,10 +57,13 @@ li {
   height: 52px;
   display: flex;
   align-items: center;
-  a {
+  button {
     text-decoration: none;
     color: #212121;
     font-size: 20px;
+    background: none;
+    outline: none;
+    border: none;
   }
 }
 }

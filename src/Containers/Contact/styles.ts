@@ -23,7 +23,7 @@ export const Container = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 140px 0px 20px 0px;
+  padding: 140px 0px 40px 0px;
 `;
 
 export const Content = styled.div`
@@ -32,8 +32,9 @@ export const Content = styled.div`
   align-items: flex-start;
   max-width: 960px;
   width:100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top: 20px;
+  justify-content: center;
 
   @media(max-width: 768px) {
     flex-direction: column;
@@ -49,7 +50,7 @@ export const FormCard = styled.div`
     flex-direction: column;
     max-width: 680px;
     width: 60%;
-    min-width: 310px;
+    min-width: 280px;
     margin-right: 15px;
     position: relative;
 
@@ -144,8 +145,8 @@ export const ErrorMessage = styled.span`
 
 export const LocalizationContainer = styled.div`
   width: 35%;
-  max-width: 230px;
-  min-width: 370px;
+  /* max-width: 230px; */
+  min-width: 280px;
   display: flex;
   flex-direction: column;
 

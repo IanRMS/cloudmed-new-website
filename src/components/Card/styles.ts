@@ -23,12 +23,12 @@ transition: 280ms ease-in-out;
 `;
 
 export const Text = styled.span`
-font-size: 24px;
+font-size: 21px;
 color:#302F42;
 `;
 
 export const Image = styled.img`
-width:95%;
+width:90%;
 margin-top: 5px;
 `;
 

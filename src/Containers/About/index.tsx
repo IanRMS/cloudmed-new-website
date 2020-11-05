@@ -23,14 +23,15 @@ import Formamos from '../../assets/images/formamos.svg';
 import Pensamos from '../../assets/images/pensamos.svg';
 import {ObjectModel } from './models/ObjectModel';
 import { AboutTexts } from './utils/texts';
+import ContainerProps from '../../models/container';
 
-const About: React.FC = () => {
+const About: React.FC<ContainerProps> = ({forwardRef}) => {
   const defaultObject = {id: 0, title: '', text: '', image: ''};
   const [object, setObject] = useState<ObjectModel>(defaultObject)
 
 
   return (
-    <Container>
+    <Container ref={forwardRef}>
       <Content>
       <Title text="SOBRE NÓS"/>
       <PageDescription text="Oferecemos soluções para o setor da saúde, focando na melhoria de

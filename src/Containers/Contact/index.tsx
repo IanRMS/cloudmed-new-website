@@ -26,8 +26,9 @@ import {
   TextArea
 } from './styles';
 import { LinearProgress } from '@material-ui/core';
+import ContainerProps from '../../models/container';
 
-const Contact: React.FC = () => {
+const Contact: React.FC<ContainerProps> = ({forwardRef}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -54,13 +55,18 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <Container>
+    <Container ref={forwardRef}>
       <Title text="ENTRE EM CONTATO" />
       <Content>
         <FormCard>
           { !loading &&
             <ProgressContainer>
-              <LinearProgress color="primary" style={{height: 8, borderRadius: '8px 8px 0px 0px'}}/>
+              <LinearProgress color="primary"
+                style={{
+                  height: 6,
+                  borderRadius: '8px 8px 0px 0px'
+                }}
+              />
             </ProgressContainer>
           }
           <form onSubmit={handleSubmit}>

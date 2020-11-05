@@ -1,22 +1,23 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-width:100vw;
-height:120px;
-display: flex;
-flex-direction: row;
-align-self: center;
-position: fixed;
-justify-content: center;
-top: 0px;
-right:0;
-left:0;
-z-index: 10;
+  width:100vw;
+  height:120px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  position: fixed;
+  justify-content: center;
+  top: 0px;
+  right:0;
+  left:0;
+  z-index: 10;
 
-@media(max-width: 679px){
+@media(max-width: 768px){
   padding: 0px 30px;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
 }
 `;
 
@@ -26,9 +27,9 @@ left: 90px;
 position: absolute;
 top: 30px;
 
-@media(max-width: 680px){
+@media(max-width: 768px){
   position: relative;
-  top: 0px;
+  top: 10px;
   left: 0px;
 }
 `;
@@ -54,14 +55,14 @@ li {
     }
 }
 
-@media(max-width: 680px) {
+@media(max-width: 768px) {
   display: none;
 }
 `;
 
 export const MenuButton = styled.div`
 
-  @media(min-width:681px){
+  @media(min-width:769px){
     display: none;
   }
 `;

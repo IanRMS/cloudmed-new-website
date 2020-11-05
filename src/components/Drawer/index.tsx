@@ -6,9 +6,14 @@ import { BackDrop, Container, DrawerHeader, DrawerLinksContainer } from './style
 interface Props {
   show: boolean;
   onClick: () => void;
+  goToHome: (ref: any) => void;
+  goToAbout: (ref: any) => void;
+  goToTecnologies: (ref: any) => void;
+  goToContact: (ref: any) => void;
 }
 
-const Drawer: React.FC<Props> = ({show, onClick}) => {
+const Drawer: React.FC<Props> = ({show, onClick, goToHome, goToAbout, goToTecnologies, goToContact }) => {
+  // const {goToHome, goToAbout, goToTecnologies, goToContact} = rest;
   return (
     <>
       <Container show={show}>
@@ -20,16 +25,16 @@ const Drawer: React.FC<Props> = ({show, onClick}) => {
         <DrawerLinksContainer>
           <ul>
             <li>
-              <a href="#">Início</a>
+              <button onClick={goToHome}>Início</button>
             </li>
-               <li>
-              <a href="#">Sobre</a>
+            <li>
+              <button onClick={goToAbout}>Sobre</button>
             </li>
-               <li>
-              <a href="#">Tecnologias</a>
+            <li>
+              <button onClick={goToTecnologies}>Tecnologias</button>
             </li>
-               <li>
-              <a href="#">Contato</a>
+            <li>
+              <button onClick={goToContact}>Contato</button>
             </li>
           </ul>
         </DrawerLinksContainer>

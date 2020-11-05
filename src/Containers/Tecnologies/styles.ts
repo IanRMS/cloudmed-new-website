@@ -18,19 +18,27 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  scroll-snap-align: start;
   padding-top: 140px;
+  padding-bottom: 20px;
   text-align: center;
+  scroll-snap-align: start;
+  position: relative;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: center;
   width:95%;
   max-width: 1024px;
   margin: 25px 0px;
+
+  @media(min-width: 769px){
+    > div + div {
+      margin-left: 20px;
+    }
+  }
 
   @media(max-width: 768px){
     flex-direction: column;
@@ -60,7 +68,11 @@ export const Card = styled.div<CardProps>`
   > img {
     width: 100%;
     height: 150px;
-    margin: 20px 0px;
+    margin: 12px 0px;
+
+    @media(max-width: 768px){
+      height: 120px;
+    }
   }
 
   > h2 {
