@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   width: 90%;
-  max-width:520px;
+  max-width:480px;
 `;
 
 export const Description = styled.span`

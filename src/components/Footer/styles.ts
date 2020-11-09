@@ -11,6 +11,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+
+  @media(max-width: 425px) {
+    padding: 30px 8px;
+  }
 `;
 
 export const Content = styled.div`
@@ -21,6 +25,10 @@ export const Content = styled.div`
   max-width: 1280px;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media(max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const FooterSpan = styled.span`
@@ -67,6 +75,7 @@ export const LinksContainer = styled.div`
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+  margin: 10px 0px;
 
   > a + a {
     margin-left: 10px;

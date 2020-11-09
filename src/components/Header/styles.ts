@@ -1,17 +1,24 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  width:100vw;
-  height:120px;
+interface Props {
+  isScrolled: boolean;
+}
+
+export const Container = styled.div<Props>`
+  max-width:100vw;
+  height:${props => props.isScrolled ? '70px' : '120px'};
   display: flex;
   flex-direction: row;
   align-self: center;
-  position: fixed;
+  position: ${props => props.isScrolled ? 'fixed' : 'absolute'};
   justify-content: center;
   top: 0px;
   right:0;
   left:0;
   z-index: 10;
+  background: ${props => props.isScrolled ? '#fafafa' : 'transparent'};
+  color: ${props => props.isScrolled ? '#212121' : '#EDF2F7;'};
+  transition: 280ms ease-in;
 
 @media(max-width: 768px){
   padding: 0px 30px;
@@ -21,15 +28,16 @@ export const Container = styled.div`
 }
 `;
 
-export const CloudIcon = styled.img`
+export const CloudIcon = styled.img<Props>`
 width:48px;
 left: 90px;
 position: absolute;
-top: 30px;
+top: ${props => props.isScrolled ? '6px' : '30px'};
+transition: 280ms ease-in;
 
 @media(max-width: 768px){
   position: relative;
-  top: 10px;
+  top: 0px;
   left: 0px;
 }
 `;
@@ -40,9 +48,15 @@ display: flex;
 flex-direction: row;
 align-items: center;
 
+> .disabled {
+  color: #e0e0e0;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
 li {
-    color: #EDF2F7;
     font-size: 18px;
+    user-select: none;
     cursor: pointer;
 
     & + li {
@@ -52,6 +66,7 @@ li {
     &:hover {
         transform: scale(1.1);
         transition: 280ms linear;
+        font-weight: bold;
     }
 }
 

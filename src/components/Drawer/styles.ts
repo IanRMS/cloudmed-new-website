@@ -17,7 +17,7 @@ export const Container = styled.div<Props>`
   transform: ${props => props.show ? 'translatX(0px)' : 'translateX(260px)'};
   padding: 10px 20px;
 
-  @media(min-width: 681px) {
+  @media(min-width: 769px) {
     display: none;
   }
 `;

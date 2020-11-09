@@ -18,7 +18,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 140px;
+  padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
   scroll-snap-align: start;

@@ -12,6 +12,7 @@ export const Container = styled.div`
     max-width: 100vw;
     min-height: 100vh;
     padding-top: 150px;
+    padding-bottom: 20px;
     scroll-snap-align: start;
     position: relative;
 `;
@@ -47,6 +48,10 @@ export const CardContent = styled.div`
 
 &::-webkit-scrollbar {
     height: 10px;
+
+    @media(min-width: 1251px) {
+      display: none;
+    }
   }
 
   &::-webkit-scrollbar-track {
