@@ -7,19 +7,18 @@ import TudoImg from '../../assets/images/tudo-em.svg';
 import FerramentasImg from '../../assets/images/ferramentas-de-ponta.svg';
 import DesignImg from '../../assets/images/design-e-tudo.svg';
 import PageDescription from '../../components/PageDescription';
-import { FaAngleDown } from 'react-icons/fa';
 import ContainerProps from '../../models/container';
 
 const Tecnologies: React.FC<ContainerProps> = ({forwardRef}) => {
   const [idSelected, setIdSelected] = useState(0);
 
-  const handleSelectId = (id: number) => {
-    if (idSelected === id) {
-      setIdSelected(0);
-    } else {
-      setIdSelected(id);
-    }
-  }
+  // const handleSelectId = (id: number) => {
+  //   if (idSelected === id) {
+  //     setIdSelected(0);
+  //   } else {
+  //     setIdSelected(id);
+  //   }
+  // }
   return (
     <Container ref={forwardRef}>
       <Title text="NOSSAS TECNOLOGIAS"/>
@@ -41,9 +40,9 @@ const Tecnologies: React.FC<ContainerProps> = ({forwardRef}) => {
             melhores recursos, disponíveis
             pelas maiores empresas desses serviços no mundo.
           </span>
-          <button type="button" onClick={() => handleSelectId(1)}>
+          {/* <button type="button" onClick={() => handleSelectId(1)}>
             <FaAngleDown size="2.5em"/>
-          </button>
+          </button> */}
         </Card>
         <Card idNumber={2}
           backgroundColor="#FABB32"
@@ -56,9 +55,9 @@ const Tecnologies: React.FC<ContainerProps> = ({forwardRef}) => {
             ferramentas e metodologias de desenvolvimento existentes, além disso,
             estão sempre antenados sobre as novidades que aparecem.
           </span>
-          <button type="button" onClick={() => handleSelectId(2)}>
+          {/* <button type="button" onClick={() => handleSelectId(2)}>
             <FaAngleDown size="2.5em" />
-          </button>
+          </button> */}
         </Card>
         <Card idNumber={3}
           backgroundColor="#3F3D56"
@@ -72,9 +71,9 @@ const Tecnologies: React.FC<ContainerProps> = ({forwardRef}) => {
             Por aqui nos preocupamos com simplicidade da usabilidade sem perder
             a essência da qualidade do resultado.
           </span>
-          <button type="button" onClick={() => handleSelectId(3)}>
+          {/* <button type="button" onClick={() => handleSelectId(3)}>
             <FaAngleDown size="2.5em"/>
-          </button>
+          </button> */}
         </Card>
       </Content>
     </Container>
